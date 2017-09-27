@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .btn-container input {
+            width: 100px;
+            height: 30px;
+        }
+        .transition {
+            width: 600px;
+            overflow: hidden;
+            -webkit-transform: -webkit-translateX(0);
+            transform: translateX(0);
+            transition: transform .8s ease-out, -webkit-transform .8s ease-out;
+        }
+        .transition > div {
+            display: inline-block;
+            float: left;
+            white-space: nowrap;
+            width: 200px;
+            text-align: center;
+            color: #FFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="btn-container">
+    <input type="button" class="J_btn" value="按钮1" />
+    <input type="button" class="J_btn" value="按钮2" />
+    <input type="button" class="J_btn" value="按钮3" />
+</div>
+<div style="width:200px;overflow:hidden;margin: 20px 0 0 50px;">
+    <div class="transition" id="transition">
+        <div style="height: auto;">
+            <div style="height: 200px;background:#f00;">Tab 1</div>
+        </div>
+        <div style="height: 1px;">
+            <div style="height: 400px;background:#0f0;">Tab 2</div>
+        </div>
+        <div style="height: 1px;">
+            <div style="height: 600px;background:#00f;">Tab 3</div>
+        </div>
+    </div>
+</div>
+<div style="width: 278px;text-align:center;">我在底部</div>
+<script type="text/javascript" src="./zepto.min.js"></script>
+<script type="text/javascript">
+var currentTab = 0;
+
+ $('#transition').on('transitionend webkitTransitionEnd', function() {
+    $('#transition>div').eq(currentTab).siblings().height(1);
+    $('#transition').height('auto');
+ });
+
+ $('.J_btn').on('click', function() {
+    var index = $('.J_btn').index($(this));
+    if(currentTab === index) {
+        return;
+    }
+
+    currentTab = index;
+
+    $('#transition>div').height('auto');
+    // 当切换到中间高度的div时，防止底部出现回弹
+    $('#transition').height($('#transition>div').eq(currentTab).height());
+    $('#transition').css('-webkit-transform', '-webkit-translateX(-' + (index * 200) + 'px)');
+    $('#transition').css('transform', 'translateX(-' + (index * 200) + 'px)');
+ });
+</script>
+</body>
+</html>

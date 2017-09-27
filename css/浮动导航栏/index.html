@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <!-- transition: all表示所有属性，ease-out表示动画先快后慢，ease-in表示动画先慢后快 -->
+    <style type="text/css">
+        .transition {
+            overflow: hidden;
+            border-radius: 25px;
+            background: #00f;
+            width: 200px;
+            height: 50px;
+            -webkit-transition: all .5s ease-out;
+            -moz-transition: all .5s ease-out;
+            transition: all .5s ease-out;
+        }
+        .transition .icon {
+            display: inline-block;
+            border-radius: 50%;
+            background: #f00;
+            line-height: 50px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .transition:hover {
+            width: 50px;
+        }
+        .transition .content {
+            vertical-align: top;
+            line-height: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="transition" id="transition">
+    <div class="icon">+</div>
+    <span class="content">我是内容</span>
+</div>
+</body>
+</html>

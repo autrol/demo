@@ -1,0 +1,22 @@
+{
+    "name": "less-demo",
+    "description": "",
+    "version": "1.0.0",
+    "author": "Yang Zhinian",
+    "scripts": {
+      "clean": "rm -rf ./build/js/* ./build/css/*"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+      
+    },
+    "bin": {
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/autrol/demo.git"
+    },
+    "license": "MIT"
+  }
+  

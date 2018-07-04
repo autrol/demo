@@ -11,10 +11,12 @@
   "devDependencies": {
     "css-loader": "^0.28.9",
     "raw-loader": "^0.5.1",
+    "react": "^16.4.1",
     "style-loader": "^0.20.1",
-    "webpack": "^3.10.0"
+    "webpack": "^4.14.0"
   },
   "dependencies": {
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "webpack-webstorm-debugger-script": "^1.0.1"
   }
 }

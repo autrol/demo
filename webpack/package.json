@@ -4,7 +4,7 @@
   "description": "webpack测试",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:single": "webpack --config webpack.config.single.js  --mode development"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,8 @@
     "raw-loader": "^0.5.1",
     "react": "^16.4.1",
     "style-loader": "^0.20.1",
-    "webpack": "^4.14.0"
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
   },
   "dependencies": {
     "webpack-dev-server": "^2.11.1",

@@ -20,7 +20,6 @@
     this._handled = false;
     this._value = undefined;
     this._deferreds = [];
-
     doResolve(fn, this);
   }
 
@@ -226,8 +225,7 @@
   
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = Promise;
-  } else if (!root.Promise) {
-    root.Promise = Promise;
   }
+    root.Promise = Promise;
 
 })(this);

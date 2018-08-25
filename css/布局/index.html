@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>圣杯布局</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 700px;
+        }
+
+        .header,
+        .footer {
+            border: 1px solid #333;
+            background: #aaa;
+            text-align: center;
+        }
+
+        .left,
+        .main,
+        .right {
+            float: left;
+            min-height: 130px;
+        }
+
+        .container {
+            border: 2px solid yellow;
+            overflow: hidden;
+        }
+
+        .left {
+            margin-left: -100%;
+            width: 200px;
+            background: red;
+        }
+
+        .right {
+            margin-left: -220px;
+            width: 220px;
+            background: green;
+        }
+
+        .main {
+            width: 100%;
+            background: blue;
+        }
+
+        .content {
+            margin: 0 220px 0 200px;
+        }
+
+        .HolyGrail {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            }
+
+            header,
+            footer {
+            flex: 1;
+            }
+
+            .HolyGrail-body {
+            display: flex;
+            flex: 1;
+            }
+
+            .HolyGrail-content {
+            flex: 1;
+            }
+
+            .HolyGrail-nav, .HolyGrail-ads {
+            /* 两个边栏的宽度设为12em */
+            flex: 0 0 12em;
+            }
+
+            .HolyGrail-nav {
+            /* 导航放到最左边 */
+            order: -1;
+            }
+    </style>
+</head>
+
+<body>
+    <header>...</header>
+    <div style="font-size: 20px;">
+        1<span style="font-size: 1.2em;">2</span>
+    </div>
+    <!-- <div style="display: flex;flex-direction: row;justify-content: space-around;height: 300px;background:#f00;align-items: flex-start;">
+        <div style="background:#0f0;font-size: 50px;flex-shrink: 0;width: 300px;">
+            1 <br>
+            2
+        </div>
+        <div style="background:#00f;flex-shrink: 1;">2<br>22<br>22<br>22<br>2</div>
+        <div style="background:#0ff;flex-shrink: 1;">3</div>
+    </div> -->
+</body>
+
+</html>

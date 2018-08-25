@@ -1,0 +1,22 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "工程中包含了各种编程语言或者工具的Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autrol/demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autrol/demo/issues"
+  },
+  "homepage": "https://github.com/autrol/demo#readme",
+  "devDependencies": {
+    "jquery": "^3.3.1"
+  }
+}
